@@ -1,0 +1,96 @@
+<!-- templates/macros/movie_cards.html -->
+{% macro movie_card(movie, genre_map) %}
+<li class="splide__slide">
+  <div class="item">
+    <div class="item__cover">
+      {% if movie.poster_path %}
+      <img
+        src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}"
+        alt="{{ movie.title }}"
+      />
+      {% else %}
+      <div class="item__cover">
+        <span>No Image Available</span>
+      </div>
+      {% endif %}
+      <a href="{{ url_for('movie', id=movie.id) }}" class="item__play">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M7 4v16l13 -8z" />
+        </svg>
+      </a>
+      <span class="item__rate item__rate--gold">
+        <span>{{ movie.vote_average|round(1) }}</span>
+      </span>
+      <button class="item__favorite" type="button" data-movie-id="{{ movie.id }}">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+          <path d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4z" />
+        </svg>
+      </button>
+      <div class="item__labels">
+        <span
+          class="item__new"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          data-bs-title="New release"
+          >New</span
+        >
+        <span
+          class="item__promo"
+          data-bs-toggle="tooltip"
+          data-bs-placement="top"
+          data-bs-title="Early access"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path
+              d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"
+            /></svg
+        ></span>
+      </div>
+    </div>
+    <div class="item__content">
+      <h2 class="item__title">
+        <a href="{{ url_for('movie', id=movie.id) }}">{{ movie.title }}</a>
+      </h2>
+      <span class="item__category">
+        {% for genre_id in movie.genre_ids[:2] %}
+          <a href="{{ url_for('movies', genre=genre_id) }}">{{ genre_map.get(genre_id, '') }}</a>
+          {% if not loop.last %}, {% endif %}
+        {% endfor %}
+        {% if movie.genre_ids|length > 2 %}...{% endif %}
+      </span>
+    </div>
+  </div>
+</li>
+{% endmacro %}

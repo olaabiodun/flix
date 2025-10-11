@@ -1,0 +1,2910 @@
+{% extends "base.html" %} {% block title %}Early Access{% endblock %} {% block content%}
+			<div class="main__content">
+				<!-- head -->
+				<section class="section">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="section__head">
+									<!-- section title -->
+									<h1 class="section__title section__title--head">FlixCoin TV</h1>
+									<!-- end section title -->
+
+									<!-- breadcrumbs -->
+									<ul class="breadcrumbs breadcrumbs--tablet">
+										<li class="breadcrumbs__item"><a href="index-2.html">Home</a></li>
+										<li class="breadcrumbs__item breadcrumbs__item--active">Online TV</li>
+									</ul>
+									<!-- end breadcrumbs -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end head -->
+
+				<!-- tv -->
+				<div class="section">
+					<div class="container">
+						<div class="row">
+							<!-- timetable -->
+							<div class="col-12">
+								<div class="timetable">
+									<div class="timetable__head">
+										<span class="timetable__datetime timetable__datetime--notitle">
+											<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 5m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M16 3l0 4"/><path d="M8 3l0 4"/><path d="M4 11l16 0"/><path d="M8 15h2v2h-2z"/></svg>
+											<span id="date"></span>
+											<span id="time"></span>
+										</span>
+
+										<!-- navs -->
+										<div class="splide splide--timetable">
+											<div class="splide__arrows">
+												<button class="splide__arrow splide__arrow--prev" type="button">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6"/></svg>
+													<span>prev</span>
+												</button>
+												<button class="splide__arrow splide__arrow--next" type="button">
+													<span>next</span>
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6"/></svg>
+												</button>
+											</div>
+
+											<div class="splide__track">
+												<ul class="nav nav-tabs splide__list timetable__tabs" id="timetable__tabs" role="tablist">
+													<li class="splide__slide nav-item" role="presentation">
+														<button id="1-tab" class="timetable__date active" data-bs-toggle="tab" data-bs-target="#tab-1" type="button" role="tab" aria-controls="tab-1" aria-selected="true">
+															<span data-date="today-month"></span><span data-date="today-date"></span>
+															<span data-date="today-day" data-format="short"></span>
+														</button>
+													</li>
+													<li class="splide__slide nav-item" role="presentation">
+														<button id="2-tab" class="timetable__date" data-bs-toggle="tab" data-bs-target="#tab-2" type="button" role="tab" aria-controls="tab-2" aria-selected="false">
+															<span data-date="day-1-month"></span><span data-date="day-1-date"></span>
+															<span data-date="day-1-day" data-format="short"></span>
+														</button>
+													</li>
+													<li class="splide__slide nav-item" role="presentation">
+														<button id="3-tab" class="timetable__date" data-bs-toggle="tab" data-bs-target="#tab-3" type="button" role="tab" aria-controls="tab-3" aria-selected="false">
+															<span data-date="day-2-month"></span><span data-date="day-2-date"></span>
+															<span data-date="day-2-day" data-format="short"></span>
+														</button>
+													</li>
+													<li class="splide__slide nav-item" role="presentation">
+														<button id="4-tab" class="timetable__date" data-bs-toggle="tab" data-bs-target="#tab-4" type="button" role="tab" aria-controls="tab-4" aria-selected="false">
+															<span data-date="day-3-month"></span><span data-date="day-3-date"></span>
+															<span data-date="day-3-day" data-format="short"></span>
+														</button>
+													</li>
+													<li class="splide__slide nav-item" role="presentation">
+														<button id="5-tab" class="timetable__date" data-bs-toggle="tab" data-bs-target="#tab-5" type="button" role="tab" aria-controls="tab-5" aria-selected="false">
+															<span data-date="day-4-month"></span><span data-date="day-4-date"></span>
+															<span data-date="day-4-day" data-format="short"></span>
+														</button>
+													</li>
+													<li class="splide__slide nav-item" role="presentation">
+														<button id="6-tab" class="timetable__date" data-bs-toggle="tab" data-bs-target="#tab-6" type="button" role="tab" aria-controls="tab-6" aria-selected="false">
+															<span data-date="day-5-month"></span><span data-date="day-5-date"></span>
+															<span data-date="day-5-day" data-format="short"></span>
+														</button>
+													</li>
+													<li class="splide__slide nav-item" role="presentation">
+														<button id="7-tab" class="timetable__date" data-bs-toggle="tab" data-bs-target="#tab-7" type="button" role="tab" aria-controls="tab-7" aria-selected="false">
+															<span data-date="day-6-month"></span><span data-date="day-6-date"></span>
+															<span data-date="day-6-day" data-format="short"></span>
+														</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- end navs -->
+									</div>
+
+									<!-- tabs -->
+									<div class="timetable__content">
+										<div class="tab-content">
+											<div class="tab-pane fade show active" id="tab-1" role="tabpanel" aria-labelledby="1-tab" tabindex="0">
+												<!-- mobile table -->
+												<div class="timetable__mob-table">
+													<div class="mob-table">
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Whispers in the Dark</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__live">Live</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<a href="stream.html" class="xtable__watch"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z"/></svg></span> Watch</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>DOGE</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.0002 DOGE</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>0.022</span>
+																	<span>≈ <b>$2.68</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/></svg>3 402</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Shattered Realities</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__text xtable__text--green">$9.00</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.005 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.6</span>
+																	<span>≈ <b>$0.41</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__premiere">Premiere</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Heart of the Storm</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>11:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Start in 1:34:15</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.043 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.5</span>
+																	<span>≈ <b>$0.36</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- end mobile table -->
+
+												<!-- tablet and desk table -->
+												<div class="timetable__table">
+													<div class="table-responsive">
+														<table class="xtable">
+															<thead>
+																<tr>
+																	<th>Time</th>
+																	<th>Item</th>
+																	<th>Access</th>
+																	<th>Coin</th>
+																	<th>Farming</th>
+																	<th>Total Income</th>
+																	<th>Viewers</th>
+																	<th></th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="xtable__live">Live</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Whispers in the Dark</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>DOGE</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.0002 DOGE</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>0.022</span>
+																			<span>≈ <b>$2.68</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/></svg>3 402</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__watch"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z"/></svg></span> Watch</a>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Shattered Realities</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$9.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.005 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.6</span>
+																			<span>≈ <b>$0.41</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__premiere">Premiere</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>10:30 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Heart of the Storm</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--clouds"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 3h-2l-3 9"/><path d="M16 3h2l3 9"/><path d="M3 12v7a1 1 0 0 0 1 1h4.586a1 1 0 0 0 .707 -.293l2 -2a1 1 0 0 1 1.414 0l2 2a1 1 0 0 0 .707 .293h4.586a1 1 0 0 0 1 -1v-7h-18z"/><path d="M7 16h1"/><path d="M16 16h1"/></svg>Premium</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.043 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.5</span>
+																			<span>≈ <b>$0.36</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/></svg>11:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Beyond the Horizon</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--pink"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 3h-2l-3 9"/><path d="M16 3h2l3 9"/><path d="M3 12v7a1 1 0 0 0 1 1h4.586a1 1 0 0 0 .707 -.293l2 -2a1 1 0 0 1 1.414 0l2 2a1 1 0 0 0 .707 .293h4.586a1 1 0 0 0 1 -1v-7h-18z"/><path d="M7 16h1"/><path d="M16 16h1"/></svg>Cinematic</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/><path d="M12 12l2 -3"/></svg>11:45 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Silent Shadows</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$5.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!-- end tablet and desk table -->
+											</div>
+
+											<div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="2-tab" tabindex="0">
+												<!-- mobile table -->
+												<div class="timetable__mob-table">
+													<div class="mob-table">
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Blindspotting</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>DOGE</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.0002 DOGE</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>0.022</span>
+																	<span>≈ <b>$2.68</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Survival Spliton</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__text xtable__text--green">$9.00</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.005 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.6</span>
+																	<span>≈ <b>$0.41</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__premiere">Premiere</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Whitney</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>11:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.043 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.5</span>
+																	<span>≈ <b>$0.36</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- end mobile table -->
+
+												<!-- tablet and desk table -->
+												<div class="timetable__table">
+													<div class="table-responsive">
+														<table class="xtable">
+															<thead>
+																<tr>
+																	<th>Time</th>
+																	<th>Item</th>
+																	<th>Access</th>
+																	<th>Coin</th>
+																	<th>Farming</th>
+																	<th>Total Income</th>
+																	<th>Viewers</th>
+																	<th></th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Blindspotting</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>DOGE</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.0002 DOGE</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>0.022</span>
+																			<span>≈ <b>$2.68</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>9:30 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Survival Spliton</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$9.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.005 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.6</span>
+																			<span>≈ <b>$0.41</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__premiere">Premiere</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>10:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Whitney</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.043 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.5</span>
+																			<span>≈ <b>$0.36</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/></svg>10:30 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Edge of Tomorrow</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/><path d="M12 12l2 -3"/></svg>11:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Chebod</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$5.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!-- end tablet and desk table -->
+											</div>
+
+											<div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="3-tab" tabindex="0">
+												<!-- mobile table -->
+												<div class="timetable__mob-table">
+													<div class="mob-table">
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Blindspotting</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>DOGE</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.0002 DOGE</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>0.022</span>
+																	<span>≈ <b>$2.68</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Survival Spliton</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__text xtable__text--green">$9.00</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.005 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.6</span>
+																	<span>≈ <b>$0.41</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__premiere">Premiere</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Whitney</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>11:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.043 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.5</span>
+																	<span>≈ <b>$0.36</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- end mobile table -->
+
+												<!-- tablet and desk table -->
+												<div class="timetable__table">
+													<div class="table-responsive">
+														<table class="xtable">
+															<thead>
+																<tr>
+																	<th>Time</th>
+																	<th>Item</th>
+																	<th>Access</th>
+																	<th>Coin</th>
+																	<th>Farming</th>
+																	<th>Total Income</th>
+																	<th>Viewers</th>
+																	<th></th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Blindspotting</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>DOGE</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.0002 DOGE</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>0.022</span>
+																			<span>≈ <b>$2.68</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Survival Spliton</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$9.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.005 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.6</span>
+																			<span>≈ <b>$0.41</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__premiere">Premiere</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>10:30 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Whitney</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.043 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.5</span>
+																			<span>≈ <b>$0.36</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/></svg>11:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Edge of Tomorrow</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/><path d="M12 12l2 -3"/></svg>11:40 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Chebod</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$5.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!-- end tablet and desk table -->
+											</div>
+
+											<div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="4-tab" tabindex="0">
+												<!-- mobile table -->
+												<div class="timetable__mob-table">
+													<div class="mob-table">
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Blindspotting</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>DOGE</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.0002 DOGE</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>0.022</span>
+																	<span>≈ <b>$2.68</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Survival Spliton</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__text xtable__text--green">$9.00</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.005 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.6</span>
+																	<span>≈ <b>$0.41</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__premiere">Premiere</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Whitney</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>11:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.043 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.5</span>
+																	<span>≈ <b>$0.36</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- end mobile table -->
+
+												<!-- tablet and desk table -->
+												<div class="timetable__table">
+													<div class="table-responsive">
+														<table class="xtable">
+															<thead>
+																<tr>
+																	<th>Time</th>
+																	<th>Item</th>
+																	<th>Access</th>
+																	<th>Coin</th>
+																	<th>Farming</th>
+																	<th>Total Income</th>
+																	<th>Viewers</th>
+																	<th></th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Blindspotting</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>DOGE</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.0002 DOGE</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>0.022</span>
+																			<span>≈ <b>$2.68</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Survival Spliton</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$9.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.005 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.6</span>
+																			<span>≈ <b>$0.41</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__premiere">Premiere</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>10:30 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Whitney</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.043 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.5</span>
+																			<span>≈ <b>$0.36</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/></svg>11:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Edge of Tomorrow</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/><path d="M12 12l2 -3"/></svg>11:30 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Chebod</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$5.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!-- end tablet and desk table -->
+											</div>
+
+											<div class="tab-pane fade" id="tab-5" role="tabpanel" aria-labelledby="5-tab" tabindex="0">
+												<!-- mobile table -->
+												<div class="timetable__mob-table">
+													<div class="mob-table">
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Blindspotting</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>DOGE</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.0002 DOGE</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>0.022</span>
+																	<span>≈ <b>$2.68</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Survival Spliton</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__text xtable__text--green">$9.00</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.005 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.6</span>
+																	<span>≈ <b>$0.41</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__premiere">Premiere</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Whitney</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>11:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.043 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.5</span>
+																	<span>≈ <b>$0.36</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- end mobile table -->
+
+												<!-- tablet and desk table -->
+												<div class="timetable__table">
+													<div class="table-responsive">
+														<table class="xtable">
+															<thead>
+																<tr>
+																	<th>Time</th>
+																	<th>Item</th>
+																	<th>Access</th>
+																	<th>Coin</th>
+																	<th>Farming</th>
+																	<th>Total Income</th>
+																	<th>Viewers</th>
+																	<th></th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Blindspotting</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>DOGE</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.0002 DOGE</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>0.022</span>
+																			<span>≈ <b>$2.68</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Survival Spliton</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$9.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.005 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.6</span>
+																			<span>≈ <b>$0.41</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__premiere">Premiere</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>11:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Whitney</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.043 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.5</span>
+																			<span>≈ <b>$0.36</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/></svg>11:30 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Edge of Tomorrow</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/><path d="M12 12l2 -3"/></svg>12:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Chebod</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$5.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!-- end tablet and desk table -->
+											</div>
+
+											<div class="tab-pane fade" id="tab-6" role="tabpanel" aria-labelledby="6-tab" tabindex="0">
+												<!-- mobile table -->
+												<div class="timetable__mob-table">
+													<div class="mob-table">
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Blindspotting</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>DOGE</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.0002 DOGE</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>0.022</span>
+																	<span>≈ <b>$2.68</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Survival Spliton</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__text xtable__text--green">$9.00</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.005 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.6</span>
+																	<span>≈ <b>$0.41</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__premiere">Premiere</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Whitney</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>11:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.043 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.5</span>
+																	<span>≈ <b>$0.36</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- end mobile table -->
+
+												<!-- tablet and desk table -->
+												<div class="timetable__table">
+													<div class="table-responsive">
+														<table class="xtable">
+															<thead>
+																<tr>
+																	<th>Time</th>
+																	<th>Item</th>
+																	<th>Access</th>
+																	<th>Coin</th>
+																	<th>Farming</th>
+																	<th>Total Income</th>
+																	<th>Viewers</th>
+																	<th></th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Blindspotting</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>DOGE</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.0002 DOGE</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>0.022</span>
+																			<span>≈ <b>$2.68</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Survival Spliton</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$9.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.005 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.6</span>
+																			<span>≈ <b>$0.41</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__premiere">Premiere</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>10:30 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Whitney</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.043 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.5</span>
+																			<span>≈ <b>$0.36</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/></svg>11:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Edge of Tomorrow</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/><path d="M12 12l2 -3"/></svg>11:30 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Chebod</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$5.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!-- end tablet and desk table -->
+											</div>
+
+											<div class="tab-pane fade" id="tab-7" role="tabpanel" aria-labelledby="7-tab" tabindex="0">
+												<!-- mobile table -->
+												<div class="timetable__mob-table">
+													<div class="mob-table">
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Blindspotting</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>DOGE</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.0002 DOGE</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/doge.svg" alt="">
+																	<span>0.022</span>
+																	<span>≈ <b>$2.68</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Survival Spliton</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__text xtable__text--green">$9.00</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.005 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.6</span>
+																	<span>≈ <b>$0.41</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__premiere">Premiere</div>
+															</li>
+														</ul>
+
+														<ul class="mob-table__row">
+															<li class="mob-table__item">
+																<span class="mob-table__title">Item</span>
+																<a href="stream.html" class="xtable__title">Whitney</a>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Time</span>
+																<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>11:00 PM</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Access</span>
+																<div class="xtable__free">Free</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Start</span>
+																<div class="xtable__text xtable__text--grey">Offline</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Coin</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>FlixCoin</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Farming</span>
+																<div class="xtable__info">
+																	<p>+ 0.043 FXC</p>
+																	<span>You earn per minute</span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Total Income</span>
+																<div class="xtable__pair">
+																	<img src="img/currencies/flixcoin.svg" alt="">
+																	<span>0.5</span>
+																	<span>≈ <b>$0.36</b></span>
+																</div>
+															</li>
+															<li class="mob-table__item">
+																<span class="mob-table__title">Viewers</span>
+																<div class="xtable__text xtable__text--grey">—</div>
+															</li>
+														</ul>
+													</div>
+												</div>
+												<!-- end mobile table -->
+
+												<!-- tablet and desk table -->
+												<div class="timetable__table">
+													<div class="table-responsive">
+														<table class="xtable">
+															<thead>
+																<tr>
+																	<th>Time</th>
+																	<th>Item</th>
+																	<th>Access</th>
+																	<th>Coin</th>
+																	<th>Farming</th>
+																	<th>Total Income</th>
+																	<th>Viewers</th>
+																	<th></th>
+																</tr>
+															</thead>
+
+															<tbody>
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12h-3.5"/><path d="M12 7v5"/></svg>09:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Blindspotting</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>DOGE</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.0002 DOGE</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/doge.svg" alt="">
+																			<span>0.022</span>
+																			<span>≈ <b>$2.68</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-3 -2"/><path d="M12 7v5"/></svg>10:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Survival Spliton</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$9.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.005 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.6</span>
+																			<span>≈ <b>$0.41</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__premiere">Premiere</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12l-2 -3"/><path d="M12 7v5"/></svg>10:40 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">Whitney</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.043 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.5</span>
+																			<span>≈ <b>$0.36</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/></svg>11:00 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Edge of Tomorrow</a>
+																	</td>
+																	<td>
+																		<div class="xtable__free">Free</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">Offline</div>
+																	</td>
+																</tr>
+
+																<tr>
+																	<td>
+																		<div class="xtable__text xtable__text--grey"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 7v5"/><path d="M12 12l2 -3"/></svg>11:40 PM</div>
+																	</td>
+																	<td>
+																		<a href="stream.html" class="xtable__title">The Chebod</a>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--green">$5.00</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>FlixCoin</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__info">
+																			<p>+ 0.047 FXC</p>
+																			<span>you earn per minute</span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__pair">
+																			<img src="img/currencies/flixcoin.svg" alt="">
+																			<span>0.52</span>
+																			<span>≈ <b>$0.38</b></span>
+																		</div>
+																	</td>
+																	<td>
+																		<div class="xtable__text xtable__text--grey">—</div>
+																	</td>
+																	<td>
+																		<button class="xtable__ticket" type="button" data-bs-toggle="modal" data-bs-target="#ticket-modal"><span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 5l0 2"/><path d="M15 11l0 2"/><path d="M15 17l0 2"/><path d="M5 5h14a2 2 0 0 1 2 2v3a2 2 0 0 0 0 4v3a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-3a2 2 0 0 0 0 -4v-3a2 2 0 0 1 2 -2"/></svg></span> Buy ticket</button>
+																	</td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<!-- end tablet and desk table -->
+											</div>
+										</div>
+									</div>
+									<!-- end tabs -->
+								</div>
+							</div>
+							<!-- end timetable -->
+						</div>
+					</div>
+				</div>
+				<!-- end tv -->
+
+				<!-- online -->
+				<section id="section-online" class="section splide splide--online">
+					<div class="container">
+						<div class="row">
+							<!-- section title -->
+							<div class="col-12">
+								<div class="section__header">
+									<h2 class="section__title">Now Watching</h2>
+
+									<div class="section__nav">
+										<div class="splide__arrows">
+											<button class="splide__arrow splide__arrow--prev" type="button">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6"/></svg>
+											</button>
+											<button class="splide__arrow splide__arrow--next" type="button">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6"/></svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end section title -->
+
+							<!-- carousel -->
+							<div class="col-12">
+								<div class="section__carousel">
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide">
+												<div class="itemcard itemcard--slide">
+													<div class="itemcard__cover">
+														<img class="itemcard__bg" src="img/covers/cover5-big.jpg" alt="">
+														<a href="stream.html" class="item__play">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z"/></svg>
+														</a>
+														<div class="item__labels">
+															<span class="item__online" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/><path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg>
+																<span>2 405</span>
+															</span>
+														</div>
+														<div class="itemcard__hash" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="You earn FXC per min">
+															<img src="img/currencies/flixcoin.svg" alt="">
+															<span>+ 0.002</span>
+														</div>
+														<div class="itemcard__title">
+															<h3>Fragments of Time</h3>
+															<span>Prime Video</span>
+														</div>
+													</div>
+												</div>
+											</li>
+
+											<li class="splide__slide">
+												<div class="itemcard itemcard--slide">
+													<div class="itemcard__cover">
+														<img class="itemcard__bg" src="img/covers/cover1-big.jpg" alt="">
+														<a href="stream.html" class="item__play">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z"/></svg>
+														</a>
+														<div class="item__labels">
+															<span class="item__online" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/><path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg>
+																<span>1 862</span>
+															</span>
+														</div>
+														<div class="itemcard__hash" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="You earn FXC per min">
+															<img src="img/currencies/flixcoin.svg" alt="">
+															<span>+ 0.005</span>
+														</div>
+														<div class="itemcard__title">
+															<h3>Beyond the Horizon</h3>
+															<span>HBO</span>
+														</div>
+													</div>
+												</div>
+											</li>
+
+											<li class="splide__slide">
+												<div class="itemcard itemcard--slide">
+													<div class="itemcard__cover">
+														<img class="itemcard__bg" src="img/covers/cover2-big.jpg" alt="">
+														<a href="stream.html" class="item__play">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z"/></svg>
+														</a>
+														<div class="item__labels">
+															<span class="item__online" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/><path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg>
+																<span>1 377</span>
+															</span>
+														</div>
+														<div class="itemcard__hash" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="You earn DOGE per min">
+															<img src="img/currencies/doge.svg" alt="">
+															<span>+ 0.0002</span>
+														</div>
+														<div class="itemcard__title">
+															<h3>Survival Spliton</h3>
+															<span>Netflix</span>
+														</div>
+													</div>
+												</div>
+											</li>
+
+											<li class="splide__slide">
+												<div class="itemcard itemcard--slide">
+													<div class="itemcard__cover">
+														<img class="itemcard__bg" src="img/covers/cover4-big.jpg" alt="">
+														<a href="stream.html" class="item__play">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z"/></svg>
+														</a>
+														<div class="item__labels">
+															<span class="item__online" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/><path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg>
+																<span>904</span>
+															</span>
+														</div>
+														<div class="itemcard__hash" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="You earn BNB per min">
+															<img src="img/currencies/bnb.svg" alt="">
+															<span>+ 0.00035</span>
+														</div>
+														<div class="itemcard__title">
+															<h3>Shattered Realities</h3>
+															<span>Prime Video</span>
+														</div>
+													</div>
+												</div>
+											</li>
+
+											<li class="splide__slide">
+												<div class="itemcard itemcard--slide">
+													<div class="itemcard__cover">
+														<img class="itemcard__bg" src="img/covers/cover3-big.jpg" alt="">
+														<a href="stream.html" class="item__play">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z"/></svg>
+														</a>
+														<div class="item__labels">
+															<span class="item__online" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/><path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg>
+																<span>825</span>
+															</span>
+														</div>
+														<div class="itemcard__hash" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="You earn ETH per min">
+															<img src="img/currencies/eth.svg" alt="">
+															<span>+ 0.00022</span>
+														</div>
+														<div class="itemcard__title">
+															<h3>The Chebod</h3>
+															<span>Miramax</span>
+														</div>
+													</div>
+												</div>
+											</li>
+
+											<li class="splide__slide">
+												<div class="itemcard itemcard--slide">
+													<div class="itemcard__cover">
+														<img class="itemcard__bg" src="img/covers/cover6-big.jpg" alt="">
+														<a href="stream.html" class="item__play">
+															<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z"/></svg>
+														</a>
+														<div class="item__labels">
+															<span class="item__online" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Online">
+																<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/><path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg>
+																<span>801</span>
+															</span>
+														</div>
+														<div class="itemcard__hash" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="You earn FXC per min">
+															<img src="img/currencies/flixcoin.svg" alt="">
+															<span>+ 0.0016</span>
+														</div>
+														<div class="itemcard__title">
+															<h3>Celestial Journey</h3>
+															<span>Paramount</span>
+														</div>
+													</div>
+												</div>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- end carousel -->
+						</div>
+					</div>
+				</section>
+				<!-- end online -->
+
+				<!-- partners -->
+				<section id="section-partners" class="section splide splide--partners">
+					<div class="container">
+						<div class="row">
+							<!-- section title -->
+							<div class="col-12">
+								<div class="section__header">
+									<h2 class="section__title">Partners</h2>
+
+									<div class="section__nav">
+										<button class="section__all" type="button" data-bs-toggle="modal" data-bs-target="#contacts-modal">Contact us</button>
+
+										<div class="splide__arrows">
+											<button class="splide__arrow splide__arrow--prev" type="button">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6"/></svg>
+											</button>
+											<button class="splide__arrow splide__arrow--next" type="button">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6"/></svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end section title -->
+
+							<!-- carousel -->
+							<div class="col-12">
+								<div class="section__carousel">
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo1.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo2.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo3.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo4.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo5.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo6.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo7.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo8.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo1.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo2.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo3.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo4.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo5.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo6.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo7.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo8.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- end carousel -->
+						</div>
+					</div>
+				</section>
+				<!-- end partners -->
+				{% endblock %}

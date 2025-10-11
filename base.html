@@ -1,28 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from flixcoin.volkovdesign.com/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Sep 2025 22:40:52 GMT -->
+<!-- Mirrored from flixcoin.volkovdesign.com/catalog1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Sep 2025 22:39:07 GMT -->
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/splide.min.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/splide.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
 	<!-- Favicons -->
-	<link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
-	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
-	<link rel="icon" type="image/png" href="icon/favicon-16x16.png" sizes="16x16">
-	<link rel="icon" sizes="192x192" href="icon/android-chrome-192x192.png">
-	<link rel="icon" sizes="512x512" href="icon/android-chrome-512x512.png">
-	<link rel="mask-icon" href="icon/safari-pinned-tab.svg" color="#141414">
-	<meta name="msapplication-TileImage" content="icon/mstile-144x144.png">
-
-	<meta name="description" content="Web3 Online Cinema HTML Template">
-	<meta name="keywords" content="">
-	<meta name="author" content="Dmitry Volkov">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='icon/apple-touch-icon.png') }}">
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='icon/favicon-32x32.png') }}" sizes="32x32">
+	<link rel="icon" type="image/png" href="{{ url_for('static', filename='icon/favicon-16x16.png') }}" sizes="16x16">
+	<link rel="icon" sizes="192x192" href="{{ url_for('static', filename='icon/android-chrome-192x192.png') }}">
+	<link rel="icon" sizes="512x512" href="{{ url_for('static', filename='icon/android-chrome-512x512.png') }}">
+	<link rel="mask-icon" href="{{ url_for('static', filename='icon/safari-pinned-tab.svg') }}" color="#141414">
+	<meta name="msapplication-TileImage" content="{{ url_for('static', filename='icon/mstile-144x144.png') }}">
 	<title>FlixCoin – Web3 Online Cinema HTML Template</title>
 </head>
 
@@ -32,7 +28,7 @@
 		<div class="sidebar">
 			<div class="sidebar__head">
 				<!-- logo -->
-				<a href="index-2.html" class="sidebar__logo">
+				<a href="/" class="sidebar__logo">
 					<img src="img/logo.svg" alt="">
 				</a>
 				<!-- end logo -->
@@ -41,10 +37,33 @@
 			<div class="sidebar__content">
 				<div class="sidebar__menu">
 					<ul class="sidebar__nav">
-						<li><a href="index-2.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/></svg><span>Home</span></a></li>
-						<li><a href="catalog1.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M8 4l0 16"/><path d="M16 4l0 16"/><path d="M4 8l4 0"/><path d="M4 16l4 0"/><path d="M4 12l16 0"/><path d="M16 8l4 0"/><path d="M16 16l4 0"/></svg><span>Movies</span> <p>25 947</p></a></li>
-						<li><a href="catalog2.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h16"/><path d="M20 16v-10a2 2 0 0 0 -2 -2h-12a2 2 0 0 0 -2 2v10l4 -6c2.667 1.333 5.333 1.333 8 0l4 6z"/></svg><span>TV Series</span> <p>7 208</p></a></li>
-						<li><a href="onlinetv.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/><path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg><span>Online TV</span></a></li>
+						<li {% if request.endpoint == 'index' or request.endpoint == 'home' %}class="active"{% endif %}>
+							<a href="/">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l-2 0l9 -9l9 9l-2 0"/><path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/><path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/>
+								</svg>
+								<span>Home</span>
+							</a>
+						</li>
+						<li {% if request.endpoint == 'movies' %}class="active"{% endif %}>
+							<a href="/movies">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/><path d="M8 4l0 16"/><path d="M16 4l0 16"/><path d="M4 8l4 0"/><path d="M4 16l4 0"/><path d="M4 12l16 0"/><path d="M16 8l4 0"/><path d="M16 16l4 0"/></svg>
+								<span>Movies</span>
+								<p>25 947</p>
+							</a>
+						</li>
+						<li {% if request.endpoint == 'series_list' %}class="active"{% endif %}>
+							<a href="/series">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 20h16"/><path d="M20 16v-10a2 2 0 0 0 -2 -2h-12a2 2 0 0 0 -2 2v10l4 -6c2.667 1.333 5.333 1.333 8 0l4 6z"/></svg>
+								<span>TV Series</span>
+								<p>7 208</p>
+							</a>
+						</li>
+						<li {% if request.endpoint == 'live' %}class="active"{% endif %}>
+							<a href="/live">
+								<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/><path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg>
+								<span>Online TV</span>
+							</a>
+						</li>
 						<li>
 							<button class="sidebar__collapsed collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-menu0" aria-expanded="false" aria-controls="collapse-menu0"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4h6v6h-6z"/><path d="M14 4h6v6h-6z"/><path d="M4 14h6v6h-6z"/><path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/></svg><span>Categories</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6"/></svg></button>
 						</li>
@@ -70,44 +89,18 @@
 								<li><a href="catalog1.html"><span>Western</span><p>726</p></a></li>
 							</ul>
 						</li>
-						<li><a href="watchlist.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"/><path d="M11 3h5a3 3 0 0 1 3 3v11"/></svg><span>Watchlist</span><p>36</p></a></li>
+						<li><a href="/watchlist"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"/><path d="M11 3h5a3 3 0 0 1 3 3v11"/></svg><span>Watchlist</span><p>36</p></a></li>
 					</ul>
+					
 
 					<ul class="sidebar__nav">
-						<li><a href="affiliate.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5.931 6.936l1.275 4.249m5.607 5.609l4.251 1.275"/><path d="M11.683 12.317l5.759 -5.759"/><path d="M5.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"/><path d="M18.5 5.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"/><path d="M18.5 18.5m-1.5 0a1.5 1.5 0 1 0 3 0a1.5 1.5 0 1 0 -3 0"/><path d="M8.5 15.5m-4.5 0a4.5 4.5 0 1 0 9 0a4.5 4.5 0 1 0 -9 0"/></svg><span>Affiliate</span></a></li>
-						<li><a href="token.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M14.8 9a2 2 0 0 0 -1.8 -1h-2a2 2 0 1 0 0 4h2a2 2 0 1 1 0 4h-2a2 2 0 0 1 -1.8 -1"/><path d="M12 7v10"/></svg><span>Token</span></a></li>
-						<li><a href="invest.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M4 6c0 1.657 3.582 3 8 3s8 -1.343 8 -3s-3.582 -3 -8 -3s-8 1.343 -8 3"></path><path d="M4 6v6c0 1.657 3.582 3 8 3c.415 0 .822 -.012 1.22 -.035"></path><path d="M20 10v-4"></path><path d="M4 12v6c0 1.657 3.582 3 8 3c.352 0 .698 -.009 1.037 -.025"></path><path d="M21 15h-2.5a1.5 1.5 0 0 0 0 3h1a1.5 1.5 0 0 1 0 3h-2.5"></path><path d="M19 21v1m0 -8v1"></path></svg><span>Invest</span></a></li>
-						<li><a href="contest.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 21l8 0"/><path d="M12 17l0 4"/><path d="M7 4l10 0"/><path d="M17 4v8a5 5 0 0 1 -10 0v-8"/><path d="M5 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M19 9m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/></svg><span>Weekly Race</span></a></li>
-					</ul>
-
-					<ul class="sidebar__nav">
-						<li>
-							<button class="sidebar__collapsed collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-menu1" aria-expanded="false" aria-controls="collapse-menu1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 4h4l3 3h7a2 2 0 0 1 2 2v8a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-11a2 2 0 0 1 2 -2"/></svg><span>Pages</span><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6"/></svg></button>
-						</li>
-						<li>
-							<ul id="collapse-menu1" class="sidebar__nav sidebar__nav--collapse collapse">
-								<li><a href="index-2.html"><span>Home v1</span></a></li>
-								<li><a href="index2.html"><span>Home v2</span></a></li>
-								<li><a href="catalog1.html"><span>Catalog (Pagination)</span></a></li>
-								<li><a href="catalog2.html"><span>Catalog (Dynamic Feed)</span></a></li>
-								<li><a href="movie.html"><span>Movie (HTML5 Video)</span></a></li>
-								<li><a href="tvseries.html"><span>TV Series (HTML5 Video)</span></a></li>
-								<li><a href="stream.html"><span>Stream (YouTube)</span></a></li>
-								<li><a href="about.html"><span>About Us</span></a></li>
-								<li><a href="profile.html"><span>Profile</span></a></li>
-								<li><a href="article.html"><span>Article</span></a></li>
-								<li><a href="actor.html"><span>Actor</span></a></li>
-								<li><a href="chat.html"><span>Chat</span></a></li>
-							</ul>
-						</li>
-					</ul>
-
-					<ul class="sidebar__nav">
-						<li><a href="access.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg><span>Early Access</span></a></li>
-						<li><a href="news.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M16 6h3a1 1 0 0 1 1 1v11a2 2 0 0 1 -4 0v-13a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1v12a3 3 0 0 0 3 3h11"/><path d="M8 8l4 0"/><path d="M8 12l4 0"/><path d="M8 16l4 0"/></svg><span>News</span></a></li>
-						<li class="active"><a href="faq.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 17l0 .01"/><path d="M12 13.5a1.5 1.5 0 0 1 1 -1.5a2.6 2.6 0 1 0 -3 -4"/></svg><span>FAQ</span></a></li>
-						<li><a href="support.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"  viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 14v-3a8 8 0 1 1 16 0v3"/><path d="M18 19c0 1.657 -2.686 3 -6 3"/><path d="M4 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z"/><path d="M15 14a2 2 0 0 1 2 -2h1a2 2 0 0 1 2 2v3a2 2 0 0 1 -2 2h-1a2 2 0 0 1 -2 -2v-3z"/></svg><span>Live Support</span></a></li>
-						<li><a href="privacy.html"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M11.46 20.846a12 12 0 0 1 -7.96 -14.846a12 12 0 0 0 8.5 -3a12 12 0 0 0 8.5 3a12 12 0 0 1 -.09 7.06"/><path d="M15 19l2 2l4 -4"/></svg><span>Privacy Policy</span></a></li>
+						<li><a href="/early-access"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg><span>Early Access</span></a></li>
+						<li><a href="/hollywood"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg><span>Hollywood</span></a></li>
+						<li><a href="/kdrama"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg><span>Korean Drama</span></a></li>
+						<li><a href="/bollywood"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg><span>Bollywood</span></a></li>
+						<li><a href="/nollywood"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg><span>Nollywood</span></a></li>
+						<li><a href="/chinese"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg><span>Chinese</span></a></li>
+						<li><a href="/anime"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg><span>Anime</span></a></li>
 					</ul>
 				</div>
 			</div>
@@ -506,8 +499,8 @@
 						<div class="col-12">
 							<div class="header__content">
 								<!-- logo -->
-								<a href="index-2.html" class="header__logo">
-									<img src="img/logo.svg" alt="">
+								<a href="{{ url_for('index') }}" class="header__logo">
+									<img src="{{ url_for('static', filename='img/logo.svg') }}" alt="">
 								</a>
 								<!-- end logo -->
 
@@ -518,102 +511,7 @@
 								</button>
 								<!-- end search btn -->
 
-								<!-- dropdown menu -->
-								<div class="header__dropdown">
-									<button class="header__dropdown-btn" type="button" id="dropdownMenu0" data-bs-toggle="dropdown" aria-expanded="false">
-										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8l16 0"/><path d="M4 16l16 0"/></svg>
-									</button>
-
-									<ul class="dropdown-menu header__dropdown-menu header__dropdown-menu--noicon" aria-labelledby="dropdownMenu0">
-										<li><a href="signin.html">Sign in</a></li>
-										<li><a href="signup.html">Sign up</a></li>
-										<li><a href="forgot.html">Forgot password</a></li>
-										<li><a href="404.html">404 Page</a></li>
-									</ul>
-								</div>
-								<!-- end dropdown menu -->
-
 								<div class="header__auth">
-									<!-- balance -->
-									<div class="header__balance">
-										<div class="header__balance-dropdown">
-											<button class="header__balance-dropdown-btn" type="button" id="dropdownBalance" data-bs-toggle="dropdown" aria-expanded="false">
-												<img src="img/currencies/usdt.svg" alt="">
-												<span>107.03753019</span>
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6"/></svg>
-											</button>
-
-											<div class="dropdown-menu header__balance-menu" aria-labelledby="dropdownBalance">
-												<ul class="header__balance-currencies">
-													<li>
-														<span><img src="img/currencies/flixcoin.svg" alt="">FXC</span>
-														<span>308.64802405</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/avax.svg" alt="">AVAX</span>
-														<span>0.0000000</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/bch.svg" alt="">BCH</span>
-														<span>0.0000000</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/bnb.svg" alt="">BNB</span>
-														<span>74.06659172</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/btc.svg" alt="">BTC</span>
-														<span>0.0000000</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/dai.svg" alt="">DAI</span>
-														<span>0.0000000</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/dash.svg" alt="">DASH</span>
-														<span>0.0000000</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/doge.svg" alt="">DOGE</span>
-														<span>98.00034188</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/eth.svg" alt="">ETH</span>
-														<span>0.0000000</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/ltc.svg" alt="">LTC</span>
-														<span>13.46294509</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/matic.svg" alt="">MATIC</span>
-														<span>0.0000000</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/trx.svg" alt="">TRX</span>
-														<span>0.0000000</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/usdc.svg" alt="">USDC</span>
-														<span>0.0000000</span>
-													</li>
-													<li class="active">
-														<span><img src="img/currencies/usdt.svg" alt="">USDT</span>
-														<span>107.03753019</span>
-													</li>
-													<li>
-														<span><img src="img/currencies/xrp.svg" alt="">XRP</span>
-														<span>0.0000000</span>
-													</li>
-												</ul>
-
-												<button class="header__balance-edit" type="button" data-bs-toggle="modal" data-bs-target="#settings-modal">Settings</button>
-											</div>
-										</div>
-
-										<button class="header__wallet" type="button" data-bs-toggle="modal" data-bs-target="#wallet-modal"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M17 8v-3a1 1 0 0 0 -1 -1h-10a2 2 0 0 0 0 4h12a1 1 0 0 1 1 1v3m0 4v3a1 1 0 0 1 -1 1h-12a2 2 0 0 1 -2 -2v-12"></path><path d="M20 12v4h-4a2 2 0 0 1 0 -4h4"></path></svg></button>
-									</div>
-									<!-- end balance -->
 
 									<!-- notices -->
 									<div class="header__notices">
@@ -674,302 +572,10 @@
 				</div>
 			</div>
 			<!-- end header -->
-
-			<div class="main__content">
-				<!-- head -->
-				<section class="section">
-					<div class="container">
-						<div class="row">
-							<div class="col-12">
-								<div class="section__head">
-									<!-- section title -->
-									<h1 class="section__title section__title--head">FAQ</h1>
-									<!-- end section title -->
-
-									<!-- breadcrumbs -->
-									<ul class="breadcrumbs breadcrumbs--tablet">
-										<li class="breadcrumbs__item"><a href="index-2.html">Home</a></li>
-										<li class="breadcrumbs__item breadcrumbs__item--active">FAQ</li>
-									</ul>
-									<!-- end breadcrumbs -->
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-				<!-- end head -->
-
-				<!-- faq -->
-				<div class="section">
-					<div class="container">
-						<div class="row">
-							<!-- accordion -->
-							<div class="col-12">
-								<div class="accordion accordion--page" id="accordion">
-									<div class="row gx-xl-3">
-										<div class="col-12 col-xl-6">
-											<div class="accordion__card">
-												<button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
-													What is FlixCoin?
-												</button>
-
-												<div id="collapse1" class="collapse" data-bs-parent="#accordion">
-													<p>FlixCoin is a next-generation Web3 entertainment platform where users can watch, earn rewards, participate in events, and engage with an innovative token-driven ecosystem.</p>
-												</div>
-											</div>
-
-											<div class="accordion__card">
-												<button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-													How do I get started?
-												</button>
-
-												<div id="collapse2" class="collapse" data-bs-parent="#accordion">
-													<p>Simply create an account, connect your wallet, and dive into a world of premium content, challenges, and earning opportunities.</p>
-												</div>
-											</div>
-
-											<div class="accordion__card">
-												<button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-													What is FlixCoin?
-												</button>
-
-												<div id="collapse3" class="collapse" data-bs-parent="#accordion">
-													<p>FlixCoin is the native utility token of the platform. It powers rewards, access to exclusive features, governance voting, and more.</p>
-												</div>
-											</div>
-
-											<div class="accordion__card">
-												<button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-													How do I earn FlixCoin?
-												</button>
-
-												<div id="collapse4" class="collapse" data-bs-parent="#accordion">
-													<p>You can earn FlixCoin by watching content, completing missions, winning races, staking, and participating in special events.</p>
-												</div>
-											</div>
-										</div>
-
-										<div class="col-12 col-xl-6">
-											<div class="accordion__card">
-												<button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-													How can I maximize my earnings?
-												</button>
-
-												<div id="collapse5" class="collapse" data-bs-parent="#accordion">
-													<p>Stay active daily, complete bonus challenges, participate in Weekly Races, and refer friends to the platform for extra bonuses.</p>
-												</div>
-											</div>
-
-											<div class="accordion__card">
-												<button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-													Is there a limit to how much I can earn?
-												</button>
-
-												<div id="collapse6" class="collapse" data-bs-parent="#accordion">
-													<p>No limits! The more active you are, the more you can potentially earn. Stay consistent and climb the leaderboards.</p>
-												</div>
-											</div>
-
-											<div class="accordion__card">
-												<button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-													How do I become an affiliate?
-												</button>
-
-												<div id="collapse7" class="collapse" data-bs-parent="#accordion">
-													<p>Sign up through the Affiliate page, get your unique referral link, and start promoting the platform across your channels.</p>
-												</div>
-											</div>
-
-											<div class="accordion__card">
-												<button class="collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
-													Is my information safe?
-												</button>
-
-												<div id="collapse8" class="collapse" data-bs-parent="#accordion">
-													<p>Yes. We use cutting-edge Web3 security practices, including wallet authentication, encryption, and privacy-first design principles to keep your data secure.</p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- end accordion -->
-						</div>
-					</div>
-				</div>
-				<!-- end faq -->
-
-				<!-- news -->
-				<section id="section-news" class="section splide splide--news">
-					<div class="container">
-						<div class="row">
-							<!-- section title -->
-							<div class="col-12">
-								<div class="section__header">
-									<h2 class="section__title">Featured Articles</h2>
-
-									<div class="section__nav">
-										<a href="news.html" class="section__all">View all</a>
-
-										<div class="splide__arrows">
-											<button class="splide__arrow splide__arrow--prev" type="button">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6"/></svg>
-											</button>
-											<button class="splide__arrow splide__arrow--next" type="button">
-												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6"/></svg>
-											</button>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- end section title -->
-
-							<!-- carousel -->
-							<div class="col-12">
-								<div class="section__carousel">
-									<div class="splide__track">
-										<ul class="splide__list">
-											<li class="splide__slide">
-												<div class="post">
-													<div class="post__head">
-														<h3 class="post__title">DAO Funds Sci-Fi Flick</h3>
-														<p class="post__text">Community voted, funded, and launched a full-length Web3 space drama.</p>
-													</div>
-
-													<div class="post__tags">
-														<a href="#" class="post__tag"><span>Web3</span></a>
-														<a href="#" class="post__tag"><span>DAO</span></a>
-													</div>
-
-													<span class="post__arrow">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12h.5m3 0h1.5m3 0h6"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
-													</span>
-
-													<a href="article.html" class="post__link"></a>
-												</div>
-											</li>
-
-											<li class="splide__slide">
-												<div class="post post--bg">
-													<div class="post__bg">
-														<img src="img/posts/1.jpg" alt="">
-													</div>
-
-													<div class="post__head">
-														<h3 class="post__title">The Future of Cinema</h3>
-														<p class="post__text">Earn tokens just by watching — rewards scale with time spent on platform.</p>
-													</div>
-
-													<div class="post__tags">
-														<a href="#" class="post__tag"><span>Web3</span></a>
-														<a href="#" class="post__tag"><span>Platform</span></a>
-													</div>
-
-													<span class="post__arrow">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12h.5m3 0h1.5m3 0h6"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
-													</span>
-
-													<a href="article.html" class="post__link"></a>
-												</div>
-											</li>
-
-											<li class="splide__slide">
-												<div class="post post--clouds">
-													<div class="post__head">
-														<h3 class="post__title">Top 5 NFT-Only Movies</h3>
-														<p class="post__text">Exclusive films only accessible through NFT ownership — are you holding any?</p>
-													</div>
-
-													<div class="post__tags">
-														<a href="#" class="post__tag"><span>Web3</span></a>
-														<a href="#" class="post__tag"><span>Economy</span></a>
-													</div>
-
-													<span class="post__arrow">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12h.5m3 0h1.5m3 0h6"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
-													</span>
-
-													<a href="article.html" class="post__link"></a>
-												</div>
-											</li>
-
-											<li class="splide__slide">
-												<div class="post post--bg">
-													<div class="post__bg">
-														<img src="img/posts/2.jpg" alt="">
-													</div>
-
-													<div class="post__head">
-														<h3 class="post__title">AI Film Gets Greenlight</h3>
-														<p class="post__text">Decentralized vote approves full AI-directed thriller for global premiere.</p>
-													</div>
-
-													<div class="post__tags">
-														<a href="#" class="post__tag"><span>Trends</span></a>
-														<a href="#" class="post__tag"><span>Culture</span></a>
-													</div>
-
-													<span class="post__arrow">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12h.5m3 0h1.5m3 0h6"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
-													</span>
-
-													<a href="article.html" class="post__link"></a>
-												</div>
-											</li>
-
-											<li class="splide__slide">
-												<div class="post post--bg">
-													<div class="post__bg">
-														<img src="img/posts/3.jpg" alt="">
-													</div>
-
-													<div class="post__head">
-														<h3 class="post__title">Vlad Goes Villain</h3>
-														<p class="post__text">New meme reimagines Vlad as the next big-screen bad guy — Internet approves.</p>
-													</div>
-
-													<div class="post__tags">
-														<a href="#" class="post__tag"><span>Memes</span></a>
-														<a href="#" class="post__tag"><span>Community</span></a>
-													</div>
-
-													<span class="post__arrow">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12h.5m3 0h1.5m3 0h6"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
-													</span>
-
-													<a href="article.html" class="post__link"></a>
-												</div>
-											</li>
-
-											<li class="splide__slide">
-												<div class="post post--pink">
-													<div class="post__head">
-														<h3 class="post__title">Drop Your Film as NFT</h3>
-														<p class="post__text">Publish indie films, monetize directly — no middlemen, just smart contracts.</p>
-													</div>
-
-													<div class="post__tags">
-														<a href="#" class="post__tag"><span>For Creators</span></a>
-														<a href="#" class="post__tag"><span>Platform</span></a>
-													</div>
-
-													<span class="post__arrow">
-														<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M5 12h.5m3 0h1.5m3 0h6"></path><path d="M13 18l6 -6"></path><path d="M13 6l6 6"></path></svg>
-													</span>
-
-													<a href="article.html" class="post__link"></a>
-												</div>
-											</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-							<!-- end carousel -->
-						</div>
-					</div>
-				</section>
-				<!-- end news -->
-
+        <main class="main">
+            {% block content %}{% endblock %}
+		
+	
 				<!-- footer -->
 				<footer class="footer">
 					<div class="container">
@@ -1078,22 +684,22 @@
 			<span>Menu</span>
 		</button>
 
-		<button class="botbar__btn botbar__btn--search" type="button">
+		<button class="botbar__btn botbar__btn--search {% if request.endpoint == 'search' %}active{% endif %}" type="button">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
 			<span>Search</span>
 		</button>
 
-		<a href="catalog1.html" class="botbar__btn">
+		<a href="movies" class="botbar__btn {% if request.endpoint == 'movies' %}active{% endif %}">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4h6v6h-6z"/><path d="M14 4h6v6h-6z"/><path d="M4 14h6v6h-6z"/><path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/></svg>
-			<span>Catalog</span>
+			<span>Movies</span>
 		</a>
 
-		<a href="onlinetv.html" class="botbar__btn">
+		<a href="live" class="botbar__btn {% if request.endpoint == 'live' %}active{% endif %}">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/><path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/><path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/></svg>
-			<span>Online TV</span>
+			<span>Live TV</span>
 		</a>
 
-		<a href="profile.html" class="botbar__btn">
+		<a href="profile.html" class="botbar__btn {% if request.endpoint == 'profile' %}active{% endif %}">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" /></svg>
 			<span>Profile</span>
 		</a>
@@ -1463,12 +1069,94 @@
 	</div>
 	<!-- end wallet modal -->
 
+	<!-- ticket modal -->
+	<div class="modal fade" id="ticket-modal" tabindex="-1" aria-labelledby="ticket-modal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal__content">
+					<button class="modal__close" type="button" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg></button>
+
+					<form action="#" class="modal__form">
+						<h4 class="modal__title">Buy Ticket</h4>
+
+						<div class="sign__group">
+							<span class="sign__label sign__label--pl">Payment method:</span>
+
+							<ul class="sign__radio">
+								<li>
+									<input id="type01" type="radio" name="type0" checked="">
+									<label for="type01">Your balance:
+										<span>
+											<img src="img/currencies/usdt.svg" alt="">
+											$107.03
+										</span>
+									</label>
+								</li>
+								<li>
+									<input id="type02" type="radio" name="type0">
+									<label for="type02">Visa / Mastercard</label>
+								</li>
+								<li>
+									<input id="type03" type="radio" name="type0">
+									<label for="type03">Paypal</label>
+								</li>
+							</ul>
+						</div>
+
+						<button type="button" class="sign__btn sign__btn--modal"><span>Proceed</span></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end ticket modal -->
+
+	<!-- contacts modal -->
+	<div class="modal fade" id="contacts-modal" tabindex="-1" aria-labelledby="contacts-modal" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal__content">
+					<button class="modal__close" type="button" data-bs-dismiss="modal" aria-label="Close"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg></button>
+					
+					<form action="#" class="modal__form">
+						<h4 class="modal__title">Contact Us</h4>
+
+						<div class="sign__group">
+							<label class="sign__label" for="firstname01">Name <b>*</b></label>
+							<input id="firstname01" type="text" name="firstname01" class="sign__input" placeholder="John">
+						</div>
+
+						<div class="sign__group">
+							<label class="sign__label" for="email01">Email <b>*</b></label>
+							<input id="email01" type="text" name="email01" class="sign__input" placeholder="email@email.com">
+						</div>
+
+						<div class="col-12">
+							<div class="sign__group">
+								<label class="sign__label" for="subject01">Subject <b>*</b></label>
+								<input id="subject01" type="text" name="subject01" class="sign__input" placeholder="Partnership">
+							</div>
+						</div>
+
+						<div class="sign__group">
+							<label for="message01" class="sign__label">Message <b>*</b></label>
+							<textarea id="message01" name="message01" class="sign__textarea"></textarea>
+						</div>
+
+						<button type="button" class="sign__btn sign__btn--modal"><span>Send</span></button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end contacts modal --></main>
+
 	<!-- JS -->
-	<script src="js/bootstrap.bundle.min.js"></script>
-	<script src="js/splide.min.js"></script>
-	<script src="js/chart.js"></script>
-	<script src="js/main.js"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/splide.min.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/chart.js') }}"></script>
+	<script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 
-<!-- Mirrored from flixcoin.volkovdesign.com/faq.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Sep 2025 22:40:52 GMT -->
+<!-- Mirrored from flixcoin.volkovdesign.com/catalog1.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Sep 2025 22:39:08 GMT -->
 </html>

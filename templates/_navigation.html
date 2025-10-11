@@ -1,0 +1,119 @@
+{% macro nav_item(endpoint, text, icon_path, count=None) %}
+<li {% if request.endpoint == endpoint %}class="active"{% endif %}>
+    <a href="{{ url_for(endpoint) }}">
+        {{ icon_path|safe }}
+        <span>{{ text }}</span>
+        {% if count %}<p>{{ count }}</p>{% endif %}
+    </a>
+</li>
+{% endmacro %}
+
+{% set home_icon %}
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M5 12l-2 0l9 -9l9 9l-2 0"/>
+    <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"/>
+    <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"/>
+</svg>
+{% endset %}
+
+{% set movies_icon %}
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M4 4m0 2a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2z"/>
+    <path d="M8 4l0 16"/>
+    <path d="M16 4l0 16"/>
+    <path d="M4 8l4 0"/>
+    <path d="M4 16l4 0"/>
+    <path d="M4 12l16 0"/>
+    <path d="M16 8l4 0"/>
+    <path d="M16 16l4 0"/>
+</svg>
+{% endset %}
+
+{% set series_icon %}
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M4 20h16"/>
+    <path d="M20 16v-10a2 2 0 0 0 -2 -2h-12a2 2 0 0 0 -2 2v10l4 -6c2.667 1.333 5.333 1.333 8 0l4 6z"/>
+</svg>
+{% endset %}
+
+{% set live_icon %}
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M18.364 19.364a9 9 0 1 0 -12.728 0"/>
+    <path d="M15.536 16.536a5 5 0 1 0 -7.072 0"/>
+    <path d="M12 13m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/>
+</svg>
+{% endset %}
+
+{% set watchlist_icon %}
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M15 10v11l-5 -3l-5 3v-11a3 3 0 0 1 3 -3h4a3 3 0 0 1 3 3z"/>
+    <path d="M11 3h5a3 3 0 0 1 3 3v11"/>
+</svg>
+{% endset %}
+
+{% set category_icon %}
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+    <path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/>
+</svg>
+{% endset %}
+
+<div class="sidebar__menu">
+    <ul class="sidebar__nav">
+        {{ nav_item('index', 'Home', home_icon) }}
+        {{ nav_item('movies', 'Movies', movies_icon, '25 947') }}
+        {{ nav_item('series_list', 'TV Series', series_icon, '7 208') }}
+        {{ nav_item('live', 'Online TV', live_icon) }}
+        
+        <li>
+            <button class="sidebar__collapsed collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-menu0" aria-expanded="false" aria-controls="collapse-menu0">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M4 4h6v6h-6z M14 4h6v6h-6z M4 14h6v6h-6z M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"/>
+                </svg>
+                <span>Categories</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M6 9l6 6l6 -6"/>
+                </svg>
+            </button>
+            <ul id="collapse-menu0" class="sidebar__nav sidebar__nav--collapse collapse">
+                <li><a href="catalog1.html"><span>Action</span><p>462</p></a></li>
+                <li><a href="catalog1.html"><span>Adventure</span><p>1 204</p></a></li>
+                <li><a href="catalog1.html"><span>Animation</span><p>89</p></a></li>
+                <li><a href="catalog1.html"><span>Biography</span><p>103</p></a></li>
+                <li><a href="catalog1.html"><span>Comedy</span><p>2 094</p></a></li>
+                <li><a href="catalog1.html"><span>Documentary</span><p>923</p></a></li>
+                <li><a href="catalog1.html"><span>Drama</span><p>781</p></a></li>
+                <li><a href="catalog1.html"><span>Education</span><p>62</p></a></li>
+                <li><a href="catalog1.html"><span>Fantasy</span><p>803</p></a></li>
+                <li><a href="catalog1.html"><span>History</span><p>1 942</p></a></li>
+                <li><a href="catalog1.html"><span>Horror</span><p>693</p></a></li>
+                <li><a href="catalog1.html"><span>Kids</span><p>105</p></a></li>
+                <li><a href="catalog1.html"><span>Military/War</span><p>1 931</p></a></li>
+                <li><a href="catalog1.html"><span>Mystery/Crime</span><p>2 056</p></a></li>
+                <li><a href="catalog1.html"><span>Politics</span><p>705</p></a></li>
+                <li><a href="catalog1.html"><span>Romance</span><p>1 684</p></a></li>
+                <li><a href="catalog1.html"><span>Sci-Fi</span><p>558</p></a></li>
+                <li><a href="catalog1.html"><span>Western</span><p>726</p></a></li>
+            </ul>
+        </li>
+        
+        {{ nav_item('watchlist', 'Watchlist', watchlist_icon, '36') }}
+    </ul>
+
+    <ul class="sidebar__nav">
+        {{ nav_item('early_access', 'Early Access', category_icon) }}
+        {{ nav_item('hollywood', 'Hollywood', category_icon) }}
+        {{ nav_item('kdrama', 'Korean Drama', category_icon) }}
+        {{ nav_item('bollywood', 'Bollywood', category_icon) }}
+        {{ nav_item('nollywood', 'Nollywood', category_icon) }}
+        {{ nav_item('chinese', 'Chinese', category_icon) }}
+        {{ nav_item('anime', 'Anime', category_icon) }}
+    </ul>
+</div>

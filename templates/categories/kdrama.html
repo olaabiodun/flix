@@ -1,0 +1,371 @@
+{% extends "base.html" %} {% block title %}Korean drama{% endblock %} {% block content%}
+			<div class="main__content">
+				<!-- head -->
+				<section class="section">
+					<div class="container">
+						<div class="row">
+							<div class="col-12">
+								<div class="section__head">
+									<!-- section title -->
+									<h1 class="section__title section__title--head">Korean drama</h1>
+									<!-- end section title -->
+
+									<!-- breadcrumbs -->
+									<ul class="breadcrumbs breadcrumbs--tablet">
+										<li class="breadcrumbs__item"><a href="index-2.html">Home</a></li>
+										<li class="breadcrumbs__item breadcrumbs__item--active">Korean drama</li>
+									</ul>
+									<!-- end breadcrumbs -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- end head -->
+
+				<!-- catalog -->
+				<div class="section section--bb">
+					<div class="container">
+						<div class="row">
+							<!-- filter -->
+							<div class="col-12">
+								<div class="filter">
+									<div class="filter__search">
+										<input type="text" placeholder="Search">
+										<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0"/><path d="M21 21l-6 -6"/></svg>
+										<button class="filter__search-clear" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M18 6l-12 12"></path><path d="M6 6l12 12"></path></svg></button>
+									</div>
+
+									<div class="dropdown filter__dropdown filter__dropdown--checkboxes">
+										<button class="filter__btn" type="button" id="filterDrop0" data-bs-toggle="dropdown" aria-expanded="false">
+											<span class="filter__btn-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M14 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 6l8 0" /><path d="M16 6l4 0"/><path d="M8 12m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 12l2 0"/><path d="M10 12l10 0"/><path d="M17 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M4 18l11 0"/><path d="M19 18l1 0"/></svg>
+											</span>
+											<span class="filter__btn-name">All Сategories</span>
+											<span class="filter__btn-counter"></span>
+											<span class="filter__btn-mask">
+												<span class="filter__btn-title">Сategories</span>
+												<span class="filter__btn-clear">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+												</span>
+											</span>
+											<span class="filter__btn-arrow">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6"/></svg>
+											</span>
+										</button>
+
+										<div class="dropdown-menu dropdown-menu-end filter__dropdown-menu" aria-labelledby="filterDrop0">
+											<button class="filter__dropdown-clear" type="button">Clear All</button>
+											<ul class="filter__dropdown-checkboxes">
+												<li>
+													<input id="sort0" name="sort0" type="checkbox">
+													<label for="sort0">Action <span>462</span></label>
+												</li>
+												<li>
+													<input id="sort1" name="sort1" type="checkbox">
+													<label for="sort1">Adventure <span>1 204</span></label>
+												</li>
+												<li>
+													<input id="sort2" name="sort2" type="checkbox">
+													<label for="sort2">Animation <span>89</span></label>
+												</li>
+												<li>
+													<input id="sort3" name="sort3" type="checkbox">
+													<label for="sort3">Biography <span>103</span></label>
+												</li>
+												<li>
+													<input id="sort4" name="sort4" type="checkbox">
+													<label for="sort4">Comedy <span>2 094</span></label>
+												</li>
+												<li>
+													<input id="sort5" name="sort5" type="checkbox">
+													<label for="sort5">Documentary <span>923</span></label>
+												</li>
+												<li>
+													<input id="sort6" name="sort6" type="checkbox">
+													<label for="sort6">Drama <span>781</span></label>
+												</li>
+												<li>
+													<input id="sort7" name="sort7" type="checkbox">
+													<label for="sort7">Education <span>62</span></label>
+												</li>
+												<li>
+													<input id="sort8" name="sort8" type="checkbox">
+													<label for="sort8">Fantasy <span>803</span></label>
+												</li>
+												<li>
+													<input id="sort9" name="sort9" type="checkbox">
+													<label for="sort9">History <span>1 942</span></label>
+												</li>
+												<li>
+													<input id="sort10" name="sort10" type="checkbox">
+													<label for="sort10">Horror <span>693</span></label>
+												</li>
+												<li>
+													<input id="sort11" name="sort11" type="checkbox">
+													<label for="sort11">Kind <span>105</span></label>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="dropdown filter__dropdown filter__dropdown--sort">
+										<button class="filter__btn" type="button" id="filterDrop1" data-bs-toggle="dropdown" aria-expanded="false">
+											<span class="filter__btn-icon">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="M20 8h-5"/><path d="M15 10V6.5a2.5 2.5 0 0 1 5 0V10"/><path d="M15 14h5l-5 6h5"/></svg>
+											</span>
+											<span class="filter__btn-name">Featured</span>
+											<span class="filter__btn-arrow">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 9l6 6l6 -6"/></svg>
+											</span>
+										</button>
+
+										<div class="dropdown-menu dropdown-menu-end filter__dropdown-menu" aria-labelledby="filterDrop1">
+											<ul class="filter__dropdown-list">
+												<li class="active"><span>Featured</span></li>
+												<li><span>Most Popular</span></li>
+												<li><span>Recently Played</span></li>
+												<li><span>Recently Added</span></li>
+												<li><span>Random</span></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end filter -->
+
+							<!-- grid -->
+							<div class="col-12">
+								<div class="grid grid--catalog">
+									{% for movie in kdrama_results %}
+										<!-- item -->
+										<div class="item">
+											<div class="item__cover">
+												<img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}" alt="">
+												<a href="movie/{{ movie.id }}" class="item__play">
+													<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M7 4v16l13 -8z"/></svg>
+												</a>
+												<span class="item__rate item__rate--bronze"><span>{{ movie.vote_average|default(0) | round(1) }}</span></span>
+												<button class="item__favorite" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M18 7v14l-6 -4l-6 4v-14a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4z"/></svg></button>
+												<div class="item__labels">
+													<span class="item__promo" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Early access"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12c2 -2.96 0 -7 -1 -8c0 3.038 -1.773 4.741 -3 6c-1.226 1.26 -2 3.24 -2 5a6 6 0 1 0 12 0c0 -1.532 -1.056 -3.94 -2 -5c-1.786 3 -2.791 3 -4 2z"/></svg></span>
+												</div>
+											</div>
+											<div class="item__content">
+												<h3 class="item__title"><a href="movie/{{ movie.id }}">{{ movie.title }}</a></h3>
+												<span class="item__category">
+													{% for genre_id in movie.genre_ids[:2] %}
+														<a href="catalog1.html">{{ genre_mapping.get(genre_id, genre_id) }}</a>{% if not loop.last %}, {% endif %}
+													{% endfor %}
+												</span>
+												<div class="item__hash" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="You earn AVAX per min">
+													<img src="img/currencies/avax.svg" alt="">
+													<span>+ 0.0007</span>
+													<span>/ min</span>
+												</div>
+											</div>
+										</div>
+										{% endfor %}
+								</div>
+							</div>
+							<!-- end grid -->
+						</div>
+
+						<div class="row">
+							<!-- paginator -->
+							<div class="col-12">
+								<!-- paginator mobile -->
+								<div class="paginator-mob">
+									<span class="paginator-mob__pages">{{ page }} of {{ total_pages }}</span>
+
+									<ul class="paginator-mob__nav">
+										<li>
+											<a href="{{ url_for('kdrama', page=page - 1) }}">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6"/></svg>
+												<span>Prev</span>
+											</a>
+										</li>
+										<li>
+											<a href="{{ url_for('kdrama', page=page + 1) }}">
+												<span>Next</span>
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6"/></svg>
+											</a>
+										</li>
+									</ul>
+								</div>
+								<!-- end paginator mobile -->
+
+								<!-- paginator desktop -->
+								<ul class="paginator">
+									<li class="paginator__item paginator__item--prev">
+										<a href="{{ url_for('kdrama', page=page - 1) }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6"/></svg></a>
+									</li>
+									<li class="paginator__item"><a href="{{ url_for('kdrama', page=page) }}">{{ page }}</a></li>
+									<li class="paginator__item paginator__item--active"><a href="{{ url_for('kdrama', page=page) }}">{{ page }}</a></li>
+									<li class="paginator__item"><a href="{{ url_for('kdrama', page=page + 1) }}">{{ page + 1 }}</a></li>
+									<li class="paginator__item"><span>...</span></li>
+									<li class="paginator__item"><a href="{{ url_for('kdrama', page=total_pages) }}">{{ total_pages }}</a></li>
+									<li class="paginator__item paginator__item--next">
+										<a href="{{ url_for('kdrama', page=page + 1) }}"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6"/></svg></a>
+									</li>
+								</ul>
+								<!-- end paginator desktop -->
+							</div>
+							<!-- end paginator -->
+						</div>
+					</div>
+				</div>
+				<!-- end catalog -->
+
+
+				<!-- partners -->
+				<section id="section-partners" class="section splide splide--partners">
+					<div class="container">
+						<div class="row">
+							<!-- section title -->
+							<div class="col-12">
+								<div class="section__header">
+									<h2 class="section__title">Partners</h2>
+
+									<div class="section__nav">
+										<button class="section__all" type="button" data-bs-toggle="modal" data-bs-target="#contacts-modal">Contact us</button>
+
+										<div class="splide__arrows">
+											<button class="splide__arrow splide__arrow--prev" type="button">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 6l-6 6l6 6"/></svg>
+											</button>
+											<button class="splide__arrow splide__arrow--next" type="button">
+												<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 6l6 6l-6 6"/></svg>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- end section title -->
+
+							<!-- carousel -->
+							<div class="col-12">
+								<div class="section__carousel">
+									<div class="splide__track">
+										<ul class="splide__list">
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo1.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo2.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo3.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo4.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo5.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo6.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo7.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo8.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo1.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo2.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo3.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo4.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo5.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo6.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo7.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+
+											<li class="splide__slide">
+												<a href="#" class="partner">
+													<img src="img/partners/logo8.svg" alt="">
+													<p>Partner.com</p>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<!-- end carousel -->
+						</div>
+					</div>
+				</section>
+				<!-- end partners -->
+{% endblock %}
